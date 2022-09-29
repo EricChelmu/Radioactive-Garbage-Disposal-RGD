@@ -1,5 +1,5 @@
 
-=== Mon Sep 19 10:28:38 2022
+=== Tue Sep 27 16:15:29 2022
 
 Packages were changed.
 Update Mode: mergeDefaultDependencies
@@ -40,7 +40,9 @@ The following packages were added:
   com.unity.modules.wind@1.0.0
   com.unity.modules.xr@1.0.0
   com.unity.test-framework@1.1.31
-  com.unity.visualscripting@1.7.8
+  com.unity.ugui@1.0.0
 The following packages were updated:
-  com.unity.collab-proxy from version 1.13.5 to 1.17.2
-  com.unity.timeline from version 1.6.2 to 1.6.4
+  com.unity.collab-proxy from version 1.15.7 to 1.17.2
+  com.unity.learn.iet-framework from version 2.1.1 to 2.2.2
+  com.unity.timeline from version 1.6.3 to 1.6.4
+  com.unity.visualscripting from version 1.7.6 to 1.7.8
