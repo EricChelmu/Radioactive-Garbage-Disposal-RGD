@@ -16,6 +16,9 @@ public class GetInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float isTriggerPressed = pinchAnimationAction.action.ReadValue<float>();
+
+        Debug.Log(isTriggerPressed);
         
     }
 }
