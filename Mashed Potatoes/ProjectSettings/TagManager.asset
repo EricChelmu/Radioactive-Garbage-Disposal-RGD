@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Uranium
+  - Radium
+  - Plutonium
+  - Destroy
   layers:
   - Default
   - TransparentFX
