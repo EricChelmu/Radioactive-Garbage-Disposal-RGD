@@ -6,7 +6,7 @@ public class SortingManager : MonoBehaviour
 {
     public static SortingManager Instance;
     public GameObject output;
-    public GameObject g;
+    public GameObject thisObject;
 
     private int uraniumCount = 0;
     private int radiumCount = 0;
@@ -31,13 +31,20 @@ public class SortingManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Upgrade 2 (1 Input - 1 Output)
+        if (uraniumSet == true)
+        {
+            Destroy(thisObject.transform.Find("Uranium").gameObject);
+            Instantiate(output, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
+            uraniumSet = false;
+        }
+
+        //Upgrade 1 (3 Input - 1 Output)
         if (uraniumSet == true && radiumSet == true && plutoniumSet == true)
         {
-            //Destroy(GameObject.FindGameObjectWithTag("Destroy"));
-            //Destroy(GameObject.FindGameObjectWithTag("Destroy"));
-            for (var i = g.transform.childCount - 1; i >= 0; i--)
+            for (var i = thisObject.transform.childCount - 1; i >= 0; i--)
             {
-                Object.Destroy(g.transform.GetChild(i).gameObject);
+                Object.Destroy(thisObject.transform.GetChild(i).gameObject);
             }
             Instantiate(output, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
             uraniumSet = false;
@@ -50,21 +57,15 @@ public class SortingManager : MonoBehaviour
     {
         uraniumCount += 1;
         uraniumSet = true;
-        Debug.Log(uraniumCount);
-        Debug.Log(uraniumSet);
     }
     public void countRadium()
     {
         radiumCount += 1;
         radiumSet = true;
-        Debug.Log(radiumCount);
-        Debug.Log(radiumSet);
     }
     public void countPlutonium()
     {
         plutoniumCount += 1;
         plutoniumSet = true;
-        Debug.Log(plutoniumCount);
-        Debug.Log(plutoniumSet);
     }
 }
