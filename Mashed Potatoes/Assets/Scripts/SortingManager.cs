@@ -31,26 +31,7 @@ public class SortingManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Upgrade 2 (1 Input - 1 Output)
-        if (uraniumSet == true)
-        {
-            Destroy(thisObject.transform.Find("Uranium").gameObject);
-            Instantiate(output, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
-            uraniumSet = false;
-        }
-
-        //Upgrade 1 (3 Input - 1 Output)
-        if (uraniumSet == true && radiumSet == true && plutoniumSet == true)
-        {
-            for (var i = thisObject.transform.childCount - 1; i >= 0; i--)
-            {
-                Object.Destroy(thisObject.transform.GetChild(i).gameObject);
-            }
-            Instantiate(output, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
-            uraniumSet = false;
-            radiumSet = false;
-            plutoniumSet = false;
-        }
+        sortingUpgrade3();
     }
 
     public void countUranium()
@@ -67,5 +48,60 @@ public class SortingManager : MonoBehaviour
     {
         plutoniumCount += 1;
         plutoniumSet = true;
+    }
+    public void sortingUpgrade1()
+    {
+        //Upgrade 1 (3 Input - 1 Output)
+        if (uraniumSet == true && radiumSet == true && plutoniumSet == true)
+        {
+            for (var i = thisObject.transform.childCount - 1; i >= 0; i--)
+            {
+                Destroy(thisObject.transform.GetChild(i).gameObject);
+            }
+            Instantiate(output, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
+            uraniumSet = false;
+            radiumSet = false;
+            plutoniumSet = false;
+        }
+    }
+    public void sortingUpgrade2()
+    {
+        //Upgrade 2 (1 Input - 1 Output)
+        if (uraniumSet == true)
+        {
+            Destroy(thisObject.transform.Find("Uranium").gameObject);
+            Instantiate(output, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
+            uraniumSet = false;
+        }
+        else if (radiumSet == true)
+        {
+            Destroy(thisObject.transform.Find("Radium").gameObject);
+            Instantiate(output, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
+            radiumSet = false;
+        }
+        else if (plutoniumSet == true)
+        {
+            Destroy(thisObject.transform.Find("Plutonium").gameObject);
+            Instantiate(output, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
+            plutoniumSet = false;
+        }
+    }
+    
+    public void sortingUpgrade3()
+    {
+        //Upgrade 3 (1 Input - 3 Outputs)
+        if (uraniumSet == true || radiumSet == true || plutoniumSet)
+        {
+            for (var i = thisObject.transform.childCount - 1; i >= 0; i--)
+            {
+                Destroy(thisObject.transform.GetChild(i).gameObject);
+            }
+            Instantiate(output, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
+            Instantiate(output, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
+            Instantiate(output, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
+            uraniumSet = false;
+            radiumSet = false;
+            plutoniumSet = false;
+        }
     }
 }
