@@ -20,8 +20,8 @@ public class SorterUranium : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Uranium"))
         {
-            collision.gameObject.tag = "Destroy";
             collision.transform.SetParent(SortingManager.Instance.transform);
+            collision.gameObject.tag = "Destroy";
             SortingManager.Instance.countUranium();
         }
     }

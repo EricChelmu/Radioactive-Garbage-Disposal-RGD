@@ -19,8 +19,8 @@ public class SorterRadium : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Radium"))
         {
-            collision.gameObject.tag = "Destroy";
             collision.transform.SetParent(SortingManager.Instance.transform);
+            collision.gameObject.tag = "Destroy";
             SortingManager.Instance.countRadium();
         }
     }

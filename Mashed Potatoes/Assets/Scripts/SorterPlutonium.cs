@@ -19,8 +19,8 @@ public class SorterPlutonium : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Plutonium"))
         {
-            collision.gameObject.tag = "Destroy";
             collision.transform.SetParent(SortingManager.Instance.transform);
+            collision.gameObject.tag = "Destroy";
             SortingManager.Instance.countPlutonium();
             
         }
