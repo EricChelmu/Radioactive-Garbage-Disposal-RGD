@@ -141,6 +141,7 @@ public class SortingManager : MonoBehaviour
             uraniumSet = false;
             radiumSet = false;
             plutoniumSet = false;
+            Money.Instance.AddMoney(50);
         }
     }
 }
