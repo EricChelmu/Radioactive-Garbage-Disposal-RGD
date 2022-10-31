@@ -16,9 +16,10 @@ public class SlotFill : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag(this.gameObject.tag))
+        if(other.gameObject.CompareTag(this.gameObject.tag) && rend.enabled == false)
         {
             rend.enabled = true;
+            Money.Instance.AddMoney(50);
             Destroy(other.gameObject);
         }
     }

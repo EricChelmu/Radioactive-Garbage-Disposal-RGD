@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8521456507244416220}
   - component: {fileID: 4750611641361597305}
   - component: {fileID: 7352521493762373555}
+  - component: {fileID: 6276871299602530100}
+  - component: {fileID: 7470536508340781526}
   m_Layer: 0
   m_Name: SlotWall03
   m_TagString: Untagged
@@ -88,6 +90,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6276871299602530100
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9009903125255870054}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.02, z: 0.004521973}
+  m_Center: {x: 0, y: 0, z: -0.0022609865}
+--- !u!114 &7470536508340781526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9009903125255870054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6588a33c59fc9804f93b7939342c8904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8199070260124496852
 PrefabInstance:
   m_ObjectHideFlags: 0

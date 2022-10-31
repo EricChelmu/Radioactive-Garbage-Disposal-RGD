@@ -21,14 +21,6 @@ public class SlotWallManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown("space"))
-        {
-            foreach (Transform child in spawnPoint)
-            {
-                GameObject.Destroy(child.gameObject);
-            }
-        }
-
         if(spawnPoint.childCount == 0)
         {
             SpawnWall();
