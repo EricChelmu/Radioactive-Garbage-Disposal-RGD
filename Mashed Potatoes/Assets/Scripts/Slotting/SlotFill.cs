@@ -14,6 +14,14 @@ public class SlotFill : MonoBehaviour
         rend.enabled = false;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            rend.enabled = true;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag(this.gameObject.tag) && rend.enabled == false)
