@@ -8,6 +8,9 @@ TagManager:
   - Radium
   - Plutonium
   - Destroy
+  - UraniumBar
+  - RadiumPyramid
+  - PlutoniumCube
   layers:
   - Default
   - TransparentFX
