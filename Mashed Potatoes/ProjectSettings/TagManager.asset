@@ -11,6 +11,7 @@ TagManager:
   - UraniumBar
   - RadiumPyramid
   - PlutoniumCube
+  - MainCanvas
   layers:
   - Default
   - TransparentFX
