@@ -17,6 +17,10 @@ public class SortingManager : MonoBehaviour
     public GameObject upgrade2Text;
     public GameObject upgrade3Text;
 
+    public GameObject sortingMachine1;
+    public GameObject sortingMachine2;
+    public GameObject sortingMachine3;
+
     private int uraniumCount = 0;
     private int radiumCount = 0;
     private int plutoniumCount = 0;
@@ -51,6 +55,7 @@ public class SortingManager : MonoBehaviour
             GameObject textClone = Instantiate(startingText, transform.position, transform.rotation);
             textClone.transform.SetParent(GameObject.FindGameObjectWithTag("MainCanvas").transform, false);
             Destroy(textClone, 20);
+
         }
         else if (sorter2 == false)
         {
@@ -58,6 +63,8 @@ public class SortingManager : MonoBehaviour
             {
                 sorter2 = true;
                 Money.Instance.RemoveMoney(1000);
+                Destroy(sortingMachine1);
+                Instantiate(sortingMachine2, new Vector3(0f, 0f, 0f), transform.rotation);
                 GameObject textClone = Instantiate(upgrade2Text, transform.position, transform.rotation);
                 textClone.transform.SetParent(GameObject.FindGameObjectWithTag("MainCanvas").transform, false);
                 Destroy(textClone, 20);
@@ -69,6 +76,8 @@ public class SortingManager : MonoBehaviour
             {
                 sorter3 = true;
                 Money.Instance.RemoveMoney(3000);
+                Destroy(sortingMachine2);
+                Instantiate(sortingMachine3, new Vector3(0f, 0f, 0f), transform.rotation);
                 GameObject textClone = Instantiate(upgrade3Text, transform.position, transform.rotation);
                 textClone.transform.SetParent(GameObject.FindGameObjectWithTag("MainCanvas").transform, false);
                 Destroy(textClone, 20);
