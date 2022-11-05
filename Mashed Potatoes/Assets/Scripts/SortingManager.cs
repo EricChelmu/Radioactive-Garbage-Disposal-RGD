@@ -64,7 +64,7 @@ public class SortingManager : MonoBehaviour
                 sorter2 = true;
                 Money.Instance.RemoveMoney(1000);
                 Destroy(sortingMachine1);
-                Instantiate(sortingMachine2, new Vector3(0f, 0f, 0f), transform.rotation);
+                Instantiate(sortingMachine2, new Vector3(-0.22f, -0.04f, 4.3f), transform.rotation);
                 GameObject textClone = Instantiate(upgrade2Text, transform.position, transform.rotation);
                 textClone.transform.SetParent(GameObject.FindGameObjectWithTag("MainCanvas").transform, false);
                 Destroy(textClone, 20);
@@ -77,7 +77,7 @@ public class SortingManager : MonoBehaviour
                 sorter3 = true;
                 Money.Instance.RemoveMoney(3000);
                 Destroy(sortingMachine2);
-                Instantiate(sortingMachine3, new Vector3(0f, 0f, 0f), transform.rotation);
+                Instantiate(sortingMachine3, new Vector3(-0.23f, -0.0028512f, 4.45f), transform.rotation);
                 GameObject textClone = Instantiate(upgrade3Text, transform.position, transform.rotation);
                 textClone.transform.SetParent(GameObject.FindGameObjectWithTag("MainCanvas").transform, false);
                 Destroy(textClone, 20);
@@ -127,18 +127,17 @@ public class SortingManager : MonoBehaviour
 
             if (randomOutput == 1)
             {
-                Instantiate(uraniumOutput, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
+                Instantiate(uraniumOutput, new Vector3(-0.249f, 0.512f, 8.56f), transform.rotation);
             }
             else if (randomOutput == 2)
             {
-                Instantiate(radiumOutput, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
+                Instantiate(radiumOutput, new Vector3(-0.249f, 0.512f, 8.56f), transform.rotation);
             }
             else if (randomOutput == 3)
             {
-                Instantiate(plutoniumOutput, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
+                Instantiate(plutoniumOutput, new Vector3(-0.249f, 0.512f, 8.56f), transform.rotation);
             }
 
-            
             Money.Instance.AddMoney(50);
             uraniumSet = false;
             radiumSet = false;
@@ -151,21 +150,21 @@ public class SortingManager : MonoBehaviour
         if (uraniumSet == true)
         {
             Destroy(thisObject.transform.GetChild(0).gameObject);
-            Instantiate(uraniumOutput, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
+            Instantiate(uraniumOutput, new Vector3(1.422f, 0.562f, 7.873f), transform.rotation);
             uraniumSet = false;
             Money.Instance.AddMoney(50);
         }
         else if (radiumSet == true)
         {
             Destroy(thisObject.transform.GetChild(0).gameObject);
-            Instantiate(radiumOutput, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
+            Instantiate(radiumOutput, new Vector3(-0.274f, 0.562f, 7.873f), transform.rotation);
             radiumSet = false;
             Money.Instance.AddMoney(50);
         }
         else if (plutoniumSet == true)
         {
             Destroy(thisObject.transform.GetChild(0).gameObject);
-            Instantiate(plutoniumOutput, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
+            Instantiate(plutoniumOutput, new Vector3(-1.994f, 0.562f, 7.873f), transform.rotation);
             plutoniumSet = false;
             Money.Instance.AddMoney(50);
         }
@@ -177,9 +176,9 @@ public class SortingManager : MonoBehaviour
         if (uraniumSet == true || radiumSet == true || plutoniumSet)
         {
             Destroy(thisObject.transform.GetChild(0).gameObject);
-            Instantiate(uraniumOutput, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
-            Instantiate(radiumOutput, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
-            Instantiate(plutoniumOutput, new Vector3(5.075f, 0.66f, 9.942f), transform.rotation);
+            Instantiate(uraniumOutput, new Vector3(1.422f, 0.562f, 7.873f), transform.rotation);
+            Instantiate(radiumOutput, new Vector3(-0.217f, 0.562f, 7.873f), transform.rotation);
+            Instantiate(plutoniumOutput, new Vector3(-1.841f, 0.562f, 7.873f), transform.rotation);
             uraniumSet = false;
             radiumSet = false;
             plutoniumSet = false;
