@@ -59,12 +59,12 @@ public class SortingManager : MonoBehaviour
         }
         else if (sorter2 == false)
         {
-            if (Money.Instance.moneyAmount >= 1000)
+            if (Money.Instance.moneyAmount >= 750)
             {
                 sorter2 = true;
-                Money.Instance.RemoveMoney(1000);
+                Money.Instance.RemoveMoney(750);
                 Destroy(sortingMachine1);
-                Instantiate(sortingMachine2, new Vector3(-0.22f, -0.04f, 4.3f), transform.rotation);
+                sortingMachine2.gameObject.SetActive(true);
                 GameObject textClone = Instantiate(upgrade2Text, transform.position, transform.rotation);
                 textClone.transform.SetParent(GameObject.FindGameObjectWithTag("MainCanvas").transform, false);
                 Destroy(textClone, 20);
@@ -72,11 +72,11 @@ public class SortingManager : MonoBehaviour
         }
         else if (sorter3 == false)
         {
-            if (Money.Instance.moneyAmount >= 3000)
+            if (Money.Instance.moneyAmount >= 1500)
             {
                 sorter3 = true;
-                Money.Instance.RemoveMoney(3000);
-                Destroy(sortingMachine2);
+                Money.Instance.RemoveMoney(1500);
+                Destroy(sortingMachine2.gameObject);
                 Instantiate(sortingMachine3, new Vector3(-0.23f, -0.0028512f, 4.45f), transform.rotation);
                 GameObject textClone = Instantiate(upgrade3Text, transform.position, transform.rotation);
                 textClone.transform.SetParent(GameObject.FindGameObjectWithTag("MainCanvas").transform, false);
