@@ -238,7 +238,8 @@ PrefabInstance:
       propertyPath: m_TargetDisplay
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6974399635117420284, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
 --- !u!20 &74453779 stripped
 Camera:
@@ -2241,6 +2242,24 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -125435165217083709, guid: 0d29cdf09fab1a748bfff3d9290f1485, type: 3}
+--- !u!1 &1560140492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d29cdf09fab1a748bfff3d9290f1485,
+    type: 3}
+  m_PrefabInstance: {fileID: 1808421019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1560140494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560140492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c7eb12ffcf4b8488a461c8ebff847b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!64 &1592626932
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2781,6 +2800,21 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &1821010830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821010819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa29024402819b34d8b9c58e06e0efbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RadioPower: 0.1
+  RadioRadius: 3
+  radiationHandle: {fileID: 0}
 --- !u!64 &1858804633
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3635,6 +3669,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.022816379, y: 0.035431948, z: 0.020111691}
   m_Center: {x: 0.0014131246, y: 0, z: -0.000055847213}
+--- !u!114 &2051209584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051209571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa29024402819b34d8b9c58e06e0efbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RadioPower: 1
+  RadioRadius: 2
+  radiationHandle: {fileID: 0}
 --- !u!1 &2063308291 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3357037809688669164, guid: 20a4777550ad13b4bb1b2dc7bc913c13,
